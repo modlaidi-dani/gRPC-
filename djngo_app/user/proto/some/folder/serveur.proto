@@ -1,0 +1,12 @@
+syntax="proto3";
+message UpdateRequest {
+    string email=1;
+    int32 age=2;
+}
+message UpdateRespense{
+ string username=1;
+ string category= 2 ;
+}
+service AgeService {
+    rpc SendUser(UpdateRequest) returns (UpdateRespense);
+}
